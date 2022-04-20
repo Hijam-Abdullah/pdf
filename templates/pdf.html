@@ -12,7 +12,7 @@
   <style>
     @font-face {
       font-family: 'SolaimanLipi';
-      src:  url({% static 'SolaimanLipi.ttf' %}) ; 
+      src: "static/SolaimanLipi.ttf";
     }
     body{
       font-family:"SolaimanLipi";
@@ -24,11 +24,13 @@
 </head>
 
 <body>
-    <button onclick="location.href=  '{% url 'pdfmake' %}';" >Get PDF </button>
+  
+    <button onclick="location.href=  '{% url 'pdfmake' %}';" >Get PDFff </button>
 <div class="ashol_name">
   <h1>কবকব্ টবা্ব</h1>
   <h1>কবকব্ টবা্ব িতকদতক</h1>
   <h1>কবকব্ টবা্ব</h1>
+  <h1>{{STATIC_ROOT}} Hello</h1>
 </div>
 <div class="ashol_name">
   <li>Printing Time</span>

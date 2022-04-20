@@ -22,9 +22,11 @@ def render_to_pdf(template_src,context_dic={}):
 
 def pdf_create(requests):
     pdf = render_to_pdf('pdf.html')
-    if pdf:
-        response=HttpResponse(pdf,content_type="applications/pdf")
-        content="inline; filename=contact.pdf"
-        response['Content-Disposition']=content
-        return response
-    return HttpResponse("not Found")
+    return pdf
+
+    # if pdf:
+    #     response=HttpResponse(pdf,content_type="applications/pdf")
+    #     content="inline; filename=contact.pdf"
+    #     response['Content-Disposition']=content
+    #     return response
+    # return HttpResponse("not Found")
