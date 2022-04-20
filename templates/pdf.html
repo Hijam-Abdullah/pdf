@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <meta charset="UTF-8" />
+
+  <title></title>
+
+  <style>
+    @font-face {
+      font-family: 'SolaimanLipi';
+      src:  url({% static 'SolaimanLipi.ttf' %}) ; 
+    }
+    body{
+      font-family:"SolaimanLipi";
+      color: red;
+      
+    }
+  </style>
+
+</head>
+
+<body>
+    <button onclick="location.href=  '{% url 'pdfmake' %}';" >Get PDF </button>
+<div class="ashol_name">
+  <h1>কবকব্ টবা্ব</h1>
+  <h1>কবকব্ টবা্ব িতকদতক</h1>
+  <h1>কবকব্ টবা্ব</h1>
+</div>
+<div class="ashol_name">
+  <li>Printing Time</span>
+  <li>Printing By তghgতক</span>
+  <li>Data Date range 20151গফহফঘঘ23-2132133</li>
+</div>
+
+
+
+</body>
+
+</html>
