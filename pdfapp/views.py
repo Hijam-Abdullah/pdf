@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
-import os, sys;
 from io import BytesIO
+from django.conf import settings
 from django.shortcuts import render
 from django.template.loader import get_template
 from django.http import HttpResponse
@@ -21,7 +21,10 @@ def render_to_pdf(template_src,context_dic={}):
     return None
 
 def pdf_create(requests):
-    pdf = render_to_pdf('pdf.html')
+    context = {
+        'STATIC_ROOT' : settings.STATIC_ROOT,
+    }
+    pdf = render_to_pdf('pdf.html', context)
     return pdf
 
     # if pdf:
